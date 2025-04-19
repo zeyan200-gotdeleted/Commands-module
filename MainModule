@@ -1,6 +1,13 @@
 local Players = game:GetService("Players")
 local ServerScriptService = game:GetService("ServerScriptService")
 
+-- Table of allowed user IDs
+local AllowedUserIds = {
+	[1] = true,
+	[2] = true,
+	[3] = true
+}
+
 local CommandSystem = {}
 CommandSystem.__index = CommandSystem
 
@@ -54,6 +61,11 @@ function CommandSystem:FindCommand(commandName)
 end
 
 function CommandSystem:OnPlayerChatted(player, message)
+	
+	if not AllowedUserIds[player.UserId] then
+		return
+	end
+
 	if message:sub(1, 1) == "!" then
 		local args = message:sub(2):split(" ")
 		local commandName = args[1] and args[1]:lower() or ""
