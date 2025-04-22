@@ -86,12 +86,6 @@ Authorized users can execute commands via chat. Examples:
 
 ## Code Breakdown
 
-### Services and Variables
-- **Services**:
-  - `Players`: Roblox service for accessing players.
-  - `ServerScriptService`: Roblox service for server-side scripts.
-- **AllowedUserIds**: A table mapping authorized User IDs to `true`.
-
 ### CommandSystem Class
 - The system is implemented as a Lua class (`CommandSystem`) using metatables.
 - Key properties:
