@@ -1,3 +1,5 @@
+## Set up
+
 -- Addition steps (these steps arent required if you are using the version from the roblox marketplace) 
 
 (1). Insert a script, and name it what ever you like 
